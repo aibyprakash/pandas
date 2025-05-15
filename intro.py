@@ -46,9 +46,22 @@ for index,row in df.iterrows():
 #print(df.sort_values('Name',ascending=False))
 
 #print(df.sort_values(['Type 1','HP'],ascending=True))
-print(df.sort_values(['Type 1','HP'],ascending=[1,0]))
+#print(df.sort_values(['Type 1','HP'],ascending=[1,0]))
 
+'''  Making changes to the data   '''
 
+#df['Total'] = df['HP']+df['Attack']+df['Defense']+df['Sp. Atk']+df['Sp. Def']+df['Speed']
+
+#df = df.drop(columns=['Total'])
+
+df['Total'] = df.iloc[:,4:10].sum(axis=1)
+
+cols = list(df.columns.values)
+df = df[cols[0:4]+[cols[-1]]+cols[4:12]]
+
+#df[['Total','HP','Defende']]
+
+print(df.head(5))
 
 
 
