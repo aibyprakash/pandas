@@ -66,6 +66,9 @@ print(df.head(5))
 
 ''' Save data into csv '''
 
-
-df.to_csv('modified.csv')
-
+'''' df to csv '''
+#df.to_csv('modified.csv',index=False)
+''' df to excel file'''
+#df.to_excel('modified.xlsx',index=False)
+''' df to tab indented txt file'''
+df.to_csv('modified.txt',index=False,sep='\t')
