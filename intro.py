@@ -64,4 +64,8 @@ df = df[cols[0:4]+[cols[-1]]+cols[4:12]]
 print(df.head(5))
 
 
+''' Save data into csv '''
+
+
+df.to_csv('modified.csv')
 
