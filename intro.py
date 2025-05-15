@@ -34,8 +34,19 @@ for index,row in df.iterrows():
 '''Read a specific location (R,C)'''
 
 
-print(df.iloc[2,1])
+#print(df.iloc[2,1])
 
+'''  SORTING / DESCRIBING DATA '''
+#min, max, mean, std dev
+
+#print(df.describe())
+
+#Sort values by name
+
+#print(df.sort_values('Name',ascending=False))
+
+#print(df.sort_values(['Type 1','HP'],ascending=True))
+print(df.sort_values(['Type 1','HP'],ascending=[1,0]))
 
 
 
