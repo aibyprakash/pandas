@@ -54,12 +54,12 @@ for index,row in df.iterrows():
 
 #df = df.drop(columns=['Total'])
 
-df['Total'] = df.iloc[:,4:10].sum(axis=1)
+#df['Total'] = df.iloc[:,4:10].sum(axis=1)
 
 cols = list(df.columns.values)
 df = df[cols[0:4]+[cols[-1]]+cols[4:12]]
 
-#df[['Total','HP','Defende']]
+#df=df[['Total','HP','Defense']]
 
 print(df.head(5))
 
